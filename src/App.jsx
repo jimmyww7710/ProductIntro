@@ -1,16 +1,33 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import { About, HomeLayout, Landing, Error, Newsletter, Cocktail, SinglePageError } from './pages/index'
+import { loader as landingLoader } from './pages/Landing';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h2>home page</h2>,
-  },
-  {
-    path: '/about',
-    element: <div>
-      <h2>about page</h2>
-    </div>
+    element: <HomeLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+        errorElement: <SinglePageError />,
+        loader: landingLoader
+      },
+      {
+        path: 'cocktail/:id',
+        element: <Cocktail />
+      },
+      {
+        path: 'newsletter',
+        element: <Newsletter />
+      },
+      {
+        path: 'about',
+        element: <About />
+      }
+    ]
   }
+
 ])
 
 const App = () => {
