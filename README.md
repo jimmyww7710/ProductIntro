@@ -12,7 +12,7 @@ To run this project, install it locally using npm:\
 $ npm install\
 $ npm dev
 
-or see demo on: https://jwclrgenerator.netlify.app/
+or see demo on: https://jwfindproduct.netlify.app/
 
 ## Inspiration
 I went through the mixMaster lesson from Udemy course "React 18 Tutorial and Projects Course (2023)" by John Smilga, built this app successfully.
