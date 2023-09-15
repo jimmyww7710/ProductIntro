@@ -23,7 +23,7 @@ const Newsletter = () => {
     return (
         <Form className="form" method="POST">
             <h4 style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                our newletter
+                our newsletter
             </h4>
             <div className="form-row">
                 <label htmlFor="name" className="form-label">
